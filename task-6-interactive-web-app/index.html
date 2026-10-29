@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NovaTasks is a simple interactive task manager for organising daily work.">
+    <title>NovaTasks | Make Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a class="brand" href="#" aria-label="NovaTasks home">
+                <span class="brand-mark">N</span>
+                <span>NovaTasks</span>
+            </a>
+            <span class="topbar-label">YOUR PERSONAL WORKSPACE</span>
+        </div>
+    </header>
+
+    <main class="container app-layout">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">YOUR DAY, YOUR WAY</p>
+                <h1>Make room for <span>progress.</span></h1>
+                <p class="welcome-text">Plan your work, focus on what matters, and celebrate each completed task.</p>
+            </div>
+            <div class="date-card">
+                <span class="date-label">TODAY</span>
+                <strong id="todayDate">Loading date...</strong>
+            </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Task summary">
+            <article class="stat-card">
+                <span class="stat-label">All tasks</span>
+                <strong id="totalCount">0</strong>
+                <span class="stat-note">Tasks in your list</span>
+            </article>
+            <article class="stat-card">
+                <span class="stat-label">To do</span>
+                <strong id="pendingCount">0</strong>
+                <span class="stat-note">Still in progress</span>
+            </article>
+            <article class="stat-card">
+                <span class="stat-label">Completed</span>
+                <strong id="completedCount">0</strong>
+                <span class="stat-note">Tasks finished</span>
+            </article>
+        </section>
+
+        <section class="workspace">
+            <div class="task-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">TASK MANAGER</p>
+                        <h2>Your tasks</h2>
+                    </div>
+                    <span class="task-badge" id="taskBadge">0 tasks</span>
+                </div>
+
+                <form id="taskForm" class="task-form">
+                    <label for="taskInput">What needs to get done?</label>
+                    <div class="input-row">
+                        <input
+                            id="taskInput"
+                            name="task"
+                            type="text"
+                            placeholder="e.g. Finish the project homepage"
+                            maxlength="120"
+                            required
+                        >
+                        <button class="primary-button" type="submit">Add task</button>
+                    </div>
+
+                    <div class="form-options">
+                        <div>
+                            <label for="taskCategory">Category</label>
+                            <select id="taskCategory" name="category">
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="Study">Study</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="taskPriority">Priority</label>
+                            <select id="taskPriority" name="priority">
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="form-message" id="formMessage" role="status"></p>
+                </form>
+
+                <div class="list-toolbar">
+                    <div class="filter-tabs" role="group" aria-label="Filter tasks">
+                        <button class="filter-button active" data-filter="all" type="button" aria-pressed="true">All</button>
+                        <button class="filter-button" data-filter="pending" type="button" aria-pressed="false">To do</button>
+                        <button class="filter-button" data-filter="completed" type="button" aria-pressed="false">Completed</button>
+                    </div>
+                    <label class="search-box" for="searchInput">
+                        <span class="visually-hidden">Search tasks</span>
+                        <input id="searchInput" type="search" placeholder="Search tasks...">
+                    </label>
+                </div>
+
+                <div id="taskList" class="task-list" aria-live="polite"></div>
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon" aria-hidden="true">✓</div>
+                    <h3>No tasks here yet</h3>
+                    <p>Add a task above to get started.</p>
+                </div>
+            </div>
+
+            <aside class="side-panel">
+                <section class="progress-card">
+                    <p class="eyebrow">YOUR MOMENTUM</p>
+                    <h2>Progress overview</h2>
+                    <div class="progress-ring" id="progressRing" role="img" aria-label="0 percent of tasks completed">
+                        <div class="progress-ring-inner">
+                            <strong id="progressPercent">0%</strong>
+                            <span>completed</span>
+                        </div>
+                    </div>
+                    <p id="progressMessage" class="progress-message">Add your first task to begin.</p>
+                    <div class="progress-track" aria-hidden="true">
+                        <span id="progressBar"></span>
+                    </div>
+                    <div class="progress-details">
+                        <span>Completion rate</span>
+                        <strong id="progressSummary">0 of 0</strong>
+                    </div>
+                </section>
+
+                <section class="tip-card">
+                    <span class="tip-label">A SMALL REMINDER</span>
+                    <h3>Start small. Keep going.</h3>
+                    <p>Choose one important task, give it your attention, and build momentum from there.</p>
+                </section>
+            </aside>
+        </section>
+
+        <footer class="app-footer">
+            <span>NovaTasks</span>
+            <span>Interactive task manager demo</span>
+            <span id="footerYear"></span>
+        </footer>
+    </main>
+</body>
+</html>
