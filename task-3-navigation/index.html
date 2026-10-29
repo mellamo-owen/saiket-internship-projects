@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NovaGuide is a responsive navigation menu demonstration.">
+    <title>NovaGuide | Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="logo" href="#home" aria-label="NovaGuide home">
+                Nova<span>Guide</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="primaryNavigation"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="primaryNavigation" aria-label="Main navigation">
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-cta" href="#contact">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <p class="eyebrow">SIMPLE. CLEAR. RESPONSIVE.</p>
+                <h1>Navigation that makes every journey easier.</h1>
+                <p class="hero-description">
+                    Explore a clean, modern navigation experience designed
+                    to work smoothly across desktops, tablets and mobile devices.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#services">Explore Services</a>
+                    <a class="button button-secondary" href="#about">Learn About Us</a>
+                </div>
+                <div class="hero-note">
+                    <span class="status-dot"></span>
+                    Responsive navigation demonstration
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT WE OFFER</p>
+                    <h2>Everything starts with a clear direction.</h2>
+                    <p>Use the navigation links to move between sections on this page.</p>
+                </div>
+
+                <div class="service-grid">
+                    <article class="service-card">
+                        <span class="card-number">01</span>
+                        <h3>Web Experiences</h3>
+                        <p>Explore straightforward interfaces built around clarity and usability.</p>
+                        <a href="#contact">Learn more <span aria-hidden="true">→</span></a>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="card-number">02</span>
+                        <h3>Responsive Design</h3>
+                        <p>Layouts that adapt to different screen sizes and devices.</p>
+                        <a href="#contact">Learn more <span aria-hidden="true">→</span></a>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="card-number">03</span>
+                        <h3>User-Friendly Tools</h3>
+                        <p>Simple interactions that help people find what they need.</p>
+                        <a href="#contact">Learn more <span aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container about-content">
+                <div>
+                    <p class="eyebrow">ABOUT NOVAGUIDE</p>
+                    <h2>Less searching. More discovering.</h2>
+                </div>
+                <p>
+                    NovaGuide is a demonstration project focused on accessible,
+                    responsive navigation. It combines semantic HTML, modern CSS
+                    and JavaScript to create a menu that is easy to understand
+                    and operate on different devices.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact-content">
+                <div>
+                    <p class="eyebrow">YOUR NEXT STEP</p>
+                    <h2>Ready to explore?</h2>
+                    <p>You've reached the contact section of the NovaGuide demonstration.</p>
+                </div>
+                <a class="button button-primary" href="#home">Back to Top ↑</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="logo" href="#home">Nova<span>Guide</span></a>
+            <p>A responsive navigation menu project.</p>
+            <p>&copy; <span id="currentYear"></span> NovaGuide. Built for learning.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
