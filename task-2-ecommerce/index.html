@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the NovaGear Smart Laptop Backpack, designed for students, developers and professionals.">
+    <title>NovaGear | Smart Laptop Backpack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="#" class="logo">Nova<span>Gear</span></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+                Menu
+            </button>
+
+            <nav class="navigation" id="navigation">
+                <a href="#product">Product</a>
+                <a href="#features">Features</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+
+            <button class="cart-button" id="openCart">
+                Cart (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-section container" id="product">
+            <div class="product-image">
+                <img src="images/backpack.svg" alt="NovaGear Smart Laptop Backpack" id="productImage">
+                <span class="image-label">SMART TRAVEL GEAR</span>
+            </div>
+
+            <div class="product-details">
+                <p class="eyebrow">BUILT FOR YOUR EVERYDAY</p>
+                <h1>Smart Laptop Backpack</h1>
+
+                <div class="rating">
+                    <span>★★★★★</span>
+                    <span>4.8</span>
+                    <a href="#reviews">(124 reviews)</a>
+                </div>
+
+                <p class="description">
+                    Carry your everyday essentials with confidence.
+                    The NovaGear backpack combines practical storage,
+                    a water-resistant exterior and a dedicated laptop
+                    compartment for work, school and travel.
+                </p>
+
+                <div class="price">KSh 3,499</div>
+                <p class="availability">In stock · Ready for everyday use</p>
+
+                <div class="option-group">
+                    <h3>Colour: <span id="selectedColor">Black</span></h3>
+                    <div class="color-options">
+                        <button class="color-button selected" data-color="Black" aria-pressed="true">Black</button>
+                        <button class="color-button" data-color="Grey" aria-pressed="false">Grey</button>
+                    </div>
+                </div>
+
+                <div class="purchase-row">
+                    <div class="quantity-control">
+                        <button type="button" id="decreaseQuantity" aria-label="Decrease quantity">−</button>
+                        <span id="quantity">1</span>
+                        <button type="button" id="increaseQuantity" aria-label="Increase quantity">+</button>
+                    </div>
+
+                    <button class="primary-button" id="addToCart">Add to Cart</button>
+                </div>
+
+                <button class="secondary-button" id="buyNow">Buy Now</button>
+
+                <p class="delivery-note">Secure checkout demonstration · No real payment is collected.</p>
+            </div>
+        </section>
+
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">DESIGNED WITH PURPOSE</p>
+                    <h2>Ready for your next move</h2>
+                    <p>Practical details that make everyday travel easier.</p>
+                </div>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-number">01</div>
+                        <h3>15.6-inch Laptop Compartment</h3>
+                        <p>A dedicated compartment for carrying a compatible laptop.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-number">02</div>
+                        <h3>Water-Resistant Exterior</h3>
+                        <p>Helps protect your belongings from light splashes.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-number">03</div>
+                        <h3>USB Charging Port</h3>
+                        <p>A convenient port for connecting your own power bank.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-number">04</div>
+                        <h3>Organised Storage</h3>
+                        <p>Multiple compartments keep everyday essentials organised.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews-section container" id="reviews">
+            <div class="section-heading">
+                <p class="eyebrow">CUSTOMER FEEDBACK</p>
+                <h2>What customers say</h2>
+                <p>Sample reviews for this demonstration storefront.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <h3>Useful for campus</h3>
+                    <p>"The compartments make it easier to organise my books and laptop."</p>
+                    <span>Brian M. · Demo review</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <h3>Simple and practical</h3>
+                    <p>"I like the clean design and the amount of storage space."</p>
+                    <span>Sarah K. · Demo review</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <h3>Good everyday option</h3>
+                    <p>"It has the features I need for carrying my work essentials."</p>
+                    <span>Daniel O. · Demo review</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button type="button" id="closeCart" aria-label="Close cart">Close</button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-summary">
+            <div><span>Subtotal</span><strong id="cartSubtotal">KSh 0</strong></div>
+            <div><span>Delivery</span><strong id="deliveryCost">KSh 0</strong></div>
+            <div class="total-row"><span>Total</span><strong id="cartTotal">KSh 0</strong></div>
+            <button type="button" class="primary-button" id="checkoutButton">Proceed to Checkout</button>
+            <p class="delivery-note">Demo only. Checkout does not collect payment details.</p>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a href="#" class="logo">Nova<span>Gear</span></a>
+            <p>Everyday gear for work, study and travel.</p>
+            <span>&copy; <span id="currentYear"></span> NovaGear. Demo storefront.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
