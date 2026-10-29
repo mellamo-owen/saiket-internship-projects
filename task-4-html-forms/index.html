@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NovaForm demonstrates accessible HTML forms with client-side validation.">
+    <title>NovaForm | Contact and Registration Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="#home">Nova<span>Form</span></a>
+            <nav aria-label="Main navigation">
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">TASK 04 · HTML FORMS</p>
+                <h1>Good conversations start with a simple form.</h1>
+                <p>
+                    Explore a clean form experience with accessible fields,
+                    helpful validation, and a responsive layout.
+                </p>
+                <a class="button button-primary" href="#contact">Get in touch</a>
+            </div>
+        </section>
+
+        <section class="features section" id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">BUILT FOR CLARITY</p>
+                    <h2>Simple fields. Clear feedback.</h2>
+                    <p>This demonstration includes common form controls and browser-friendly validation.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="feature-number">01</span>
+                        <h3>Accessible inputs</h3>
+                        <p>Labels and appropriate input types help people complete each field.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-number">02</span>
+                        <h3>Form validation</h3>
+                        <p>Required fields and email validation help catch common mistakes.</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-number">03</span>
+                        <h3>Responsive layout</h3>
+                        <p>The page adapts to desktops, tablets, and mobile screens.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container form-layout">
+                <div class="form-intro">
+                    <p class="eyebrow">CONTACT NOVAFORM</p>
+                    <h2>Let's talk about your idea.</h2>
+                    <p>
+                        Fill in the form to try the validation and confirmation
+                        experience. This is a frontend demonstration only.
+                    </p>
+
+                    <div class="privacy-note">
+                        <strong>Demo notice</strong>
+                        <p>Your submission will not be sent to a server or stored in a database.</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="field-row">
+                        <div class="form-field">
+                            <label for="fullName">Full name</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Your full name"
+                                autocomplete="name"
+                                minlength="2"
+                                maxlength="80"
+                                required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                maxlength="120"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="topic">What is this about?</label>
+                        <select id="topic" name="topic" required>
+                            <option value="">Choose a topic</option>
+                            <option value="general">General enquiry</option>
+                            <option value="web-design">Web design</option>
+                            <option value="development">Web development</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Your message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Tell us a little about your enquiry..."
+                            minlength="10"
+                            maxlength="1000"
+                            required></textarea>
+                        <span class="field-hint">At least 10 characters.</span>
+                    </div>
+
+                    <div class="form-field checkbox-field">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I understand this is a demonstration form and my message will not be sent.</label>
+                    </div>
+
+                    <button class="button button-primary submit-button" type="submit">
+                        Submit message
+                    </button>
+
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="logo" href="#home">Nova<span>Form</span></a>
+            <p>HTML Forms · SaiKet Systems Internship</p>
+            <p>&copy; <span id="currentYear"></span> NovaForm. Learning project.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
